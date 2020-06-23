@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=883;
+		nextID=884;
 	};
 	class LayerIndexProvider
 	{
-		nextID=72;
+		nextID=76;
 	};
 	class Camera
 	{
-		pos[]={2850.9531,397.45599,185.48643};
-		dir[]={0.49854454,-0.52520555,0.68980193};
-		up[]={0.30787823,0.85069817,0.42599288};
-		aside[]={0.81057203,-6.1321771e-007,-0.58582431};
+		pos[]={500.67899,873.39178,-1.847096};
+		dir[]={0.20414849,-0.83705503,0.507689};
+		up[]={0.31228971,0.54710436,0.77661896};
+		aside[]={0.92783791,1.2564706e-006,-0.37309864};
 	};
 };
 binarizationWanted=0;
@@ -171,6 +171,8 @@ randomSeed=7986313;
 class ScenarioData
 {
 	author="[GREUH] Zbug, [GREUH] McKeewa, [KP] Wyqer";
+	overviewText="S15 -  Liberation Mission - rules by Prophet";
+	onLoadMission="Hey  dont kill the civilians";
 	respawnDialog=0;
 	disabledAI=1;
 	respawn=3;
@@ -234,7 +236,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=358;
+		items=359;
 		class Item0
 		{
 			dataType="Marker";
@@ -8282,6 +8284,7 @@ class Mission
 					};
 					id=860;
 					type="CamoNet_BLUFOR_open_F";
+					atlOffset=-0.045166016;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8391,7 +8394,7 @@ class Mission
 				};
 			};
 			id=594;
-			atlOffset=-0.063446045;
+			atlOffset=-0.069091797;
 		};
 		class Item283
 		{
@@ -12538,6 +12541,97 @@ class Mission
 			};
 			id=794;
 			type="CUP_t_PistaciaL2s_EP1";
+		};
+		class Item358
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={644.43115,549.16376,203.53217};
+				angles[]={0.13359402,0,6.0643539};
+			};
+			id=883;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="76561197973183150";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Battleye";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				nAttributes=4;
+			};
 		};
 	};
 	class Connections
